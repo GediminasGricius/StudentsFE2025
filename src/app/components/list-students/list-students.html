@@ -1,0 +1,17 @@
+<div class="card mt-3">
+    <div class="card-header">
+        Students list
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            
+            
+            <li *ngFor="let student of students; let i=index"  class="list-group-item">
+                {{ (i+1) }}. {{ student.name }}
+                <button class="btn btn-danger float-end" (click)="deleteStudent(i)">Delete</button>
+                <a class="btn btn-success me-2 float-end" [routerLink]="['/student', student.id]">Redaguoti</a>
+            </li>
+
+        </ul>
+    </div>
+</div>
